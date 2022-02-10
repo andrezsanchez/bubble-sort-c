@@ -8,7 +8,7 @@ int reverse_sorted_order(int a, int b) {
   return b - a;
 }
 
-int * bubble_sort(int *target, int count, compare_cb cmp) {
+void bubble_sort(int *target, int count, compare_cb cmp) {
   int temp = 0;
   int i = 0;
   int j = 0;
@@ -22,6 +22,4 @@ int * bubble_sort(int *target, int count, compare_cb cmp) {
       }
     }
   }
-
-  return target;
 }
