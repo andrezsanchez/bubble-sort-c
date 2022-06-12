@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "bubble_sort.h"
 #include "insertion_sort.h"
+#include "permutation_sort.h"
 #include "sort_t.h"
 #include "sorted_order.h"
 
@@ -51,6 +52,8 @@ void test_sort(sort_t sort) {
   }
 
   {
+    /*int numbers[] = { 4, 2, -156, 1 };*/
+    /*int sorted_numbers[] = { -156, 1, 2, 4 };*/
     int numbers[] = { 4, 5, 2, 8, 4, 1, 23, 24, -156, 74, 14, 15, 99, 15 };
     int sorted_numbers[] = { -156, 1, 2, 4, 4, 5, 8, 14, 15, 15, 23, 24, 74, 99 };
     sort(numbers, c_vec_len(numbers), sorted_order);
@@ -64,6 +67,7 @@ int main(int argc, char *argv[]) {
   sort_t sorts[] = {
     bubble_sort,
     insertion_sort,
+    permutation_sort,
   };
 
   for (int i = 0; i < c_vec_len(sorts); i++) {
