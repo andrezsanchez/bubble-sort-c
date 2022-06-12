@@ -31,11 +31,5 @@ bool permutation_sort_internal(int *target, int start, int end, compare_cb cmp) 
 
 void permutation_sort(int *target, int count, compare_cb cmp) {
   permutation_sort_internal(target, 0, count, cmp);
-
-  for (int i = 0; i < count; i++) {
-    printf("%d ", target[i]);
-  }
-
-  printf("\n");
 }
 
