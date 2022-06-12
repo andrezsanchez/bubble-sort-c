@@ -18,7 +18,7 @@ bool permutation_sort_internal(int *target, int start, int end, compare_cb cmp) 
     return true;
   }
 
-  for (int i = start + 1; i < end; i++) {
+  for (int i = start; i < end; i++) {
     swap(target, start, i);
     if (permutation_sort_internal(target, start + 1, end, cmp)) {
       return true;
@@ -31,5 +31,11 @@ bool permutation_sort_internal(int *target, int start, int end, compare_cb cmp) 
 
 void permutation_sort(int *target, int count, compare_cb cmp) {
   permutation_sort_internal(target, 0, count, cmp);
+
+  for (int i = 0; i < count; i++) {
+    printf("%d ", target[i]);
+  }
+
+  printf("\n");
 }
 
